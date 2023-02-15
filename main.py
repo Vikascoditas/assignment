@@ -1,5 +1,5 @@
 location=input("enter file location")
-file=open('C:\\Users\\Coditas\\Desktop\\question.txt','r')
+file=open(location,'r')
 answer=0
 delimitter=input("enter delimitter")
 for i in file:
