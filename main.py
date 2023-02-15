@@ -1,17 +1,13 @@
 location=input("enter file location")
-file=open(location,'r')
+file=open('C:\\Users\\Coditas\\Desktop\\question.txt','r')
 answer=0
 delimitter=input("enter delimitter")
 for i in file:
-    if delimitter=='\n':
-      temp=i.split()
-    elif delimitter=='\t':
-      temp=i.split(' ')
-    else:
-      temp=i.split(delimitter)
+    
+      i=i.split('\n')
+      temp=''.join(i).split(delimitter)
    
-    print(temp)
-    answer+=sum([int(j) for j in temp if j.isnumeric()] )
+      answer+=sum([int(j) for j in temp if j.isnumeric()] )
        
 print(answer)
 file.close()
